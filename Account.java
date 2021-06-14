@@ -1,18 +1,18 @@
-// Base clase
-// Abstract
+// Klasa podstawowa
+// Abstrakcyjna
 public abstract class Account {
     private String firstName;
     private String lastName;
     private String pesel;
     private String accountNumber;
     private double saveMoney;
-    // account number
+    // numer konta
     private int accountNumber;
 
-    // Balance
+    // saldo
     protected double balance; 
 
-    // Default constructor
+    // podstawowy konstruktor
     public Account() {
 
     }
@@ -25,7 +25,7 @@ public abstract class Account {
         this.balance = balance;
     }
 
-    // Getter methods
+    // metody pobierające
     public double getBalance() {
         return this.balance;
     }
@@ -64,21 +64,21 @@ public abstract class Account {
 
     // Abstract
     /**
-     * Function to deposit funds into the account as long as
-     * the amount parameter is > 0 
+     * Funkcja do składowania pieniędzy na koncie dopóki
+     * parametr amount(ilośc) > 0 
      * 
-     * Apply Transaction fee for the CheckingAccount
+     * Dodanie opłaty tranzakcyjnej do sprawdzanego konta
      * 
-     * @param amount value to be deposited
+     * @wartość parametru amount do zapisania
      */
     public abstract void deposit(double amount); 
 
     /**
-     * Function to withdraw funds from the Account as long as
-     *  1. Amount to withdraw must be > 0
-     *  2. Amount to withdraw must be <= balance
+     * Funkcja do zabierania środków z konta dopóki
+     *  1. Wartość do wypłaty musi być > 0
+     *  2. Wartośc do wypłaty musi być <= stanowi konta
      * 
-     * @param amount value to be withdrawn
+     * @pwartość parametru amount do wypłacenia
      */    
     public abstract void withdraw(double amount); 
 }
